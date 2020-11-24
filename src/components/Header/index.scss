@@ -1,0 +1,60 @@
+@import "styles/index";
+
+.main-header {
+  position: relative;
+  display: block;
+  height: 55px;
+  border-bottom: 1px solid #C8CED3;
+  z-index: 10;
+  background-color: white;
+}
+
+.icon-menu-fold {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .notification, .dropdown-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+
+    &:hover {
+      background-color: rgba(0,0,0,.025);
+    }
+  }
+}
+
+.notification {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.icon-notification {
+  font-size: 25px;
+}
+
+.avatar {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.count-notification {
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  min-width: 18px;
+  height: 20px;
+  padding: 0 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  color: $white;
+  background: $red;
+}

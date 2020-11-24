@@ -1,0 +1,272 @@
+$light-color: #f0f3f5;
+$red: #FF0000;
+$blue: #0F62AB;
+$black: #000000;
+$white: #FFFFFF;
+$brown: #89602B;
+$green: green;
+$mb-20: 20px;
+
+body {
+  font-family: sans-serif;
+}
+
+.mb-20 {
+  margin-bottom: $mb-20;
+}
+
+.cl-red {
+ color: $red;
+}
+
+.cl-greend {
+  color: $green;
+}
+
+.cl-blue {
+  color: $blue;
+}
+
+.cl-brown {
+  color: $brown;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.header-text {
+  p {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #404040;
+    font-family: "Myriad Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+    padding-top: 4.8px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.container-main {
+  border: 1px solid #C8CED3;
+  border-radius: 5px;
+
+  .card-header {
+    background-color: #F0F3F5;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #C8CED3;
+  }
+
+  .card-body {
+    background-color: $white;
+    border-radius: 0 0 5px 5px;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+.ant-form-item-label {
+  text-align: left;
+}
+
+.ant-form-item-label {
+  > label.ant-form-item-required {
+    &:after {
+      color: #ff4d4f;
+      content: '*';
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+    }
+    &:before {
+      content: none !important;
+    }
+  }
+}
+
+.ant-form-item-label {
+  > label {
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.ant-table-cell:last-child {
+  padding: 0 10px;
+}
+
+.ant-form-item-explain {
+  font-size: 12px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ant-table-thead {
+  > tr {
+    > th {
+      font-weight: 600;
+      padding: 10px;
+    }
+  }
+}
+
+.ant-table-tbody {
+  > tr {
+    > td {
+      padding: 10px;
+    }
+  }
+}
+
+.container-main {
+  margin-bottom: 15px;
+  .card-body {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+.ant-row {
+  padding: 0.1rem 0;
+}
+
+.ant-menu-inline-collapsed {
+  > .ant-menu-item {
+    padding: 0 22px;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.business-info {
+  .ant-row {
+    padding: 0.5rem 0;
+  }
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.my-modal-class {
+  .ant-modal-footer{
+  text-align: center !important;
+  }
+}
+
+.ant-table-pagination-right {
+  float: none !important;
+  text-align: right;
+}
+
+.ant-pagination-total-text {
+  float: left !important;
+}
+
+.text-danger {
+  color: #ff0000;
+}
+
+.ant-layout-sider-children {
+  overflow-y: auto;
+}
+
+.ant-table {
+  overflow: auto;
+}
+
+.ant-select-item-option-content {
+  text-align: left;
+}
+
+.mgt-20 {
+  margin-top: 20px;
+}
+
+.wrap-text {
+  overflow-wrap: break-word;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.form-input {
+  width: 100%;
+  margin: auto !important;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.pd-12 {
+  padding: 0 12px;
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.bg-red {
+  background: $red;
+}
+
+.bg-green {
+  background: $green;
+}
+
+.cl-white {
+  color: $white;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.hidden-button {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}

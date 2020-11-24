@@ -1,0 +1,14 @@
+.container {
+  padding: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.category {
+  width: 300px;
+  margin-right: 50px !important;
+}
+
+.ant-upload-list {
+  display: none !important;
+}

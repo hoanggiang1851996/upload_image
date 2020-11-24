@@ -1,0 +1,51 @@
+@import 'styles/index';
+
+#components-layout-demo-side {
+  .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+}
+
+.ant-layout-sider {
+  background: $white;
+}
+
+.sidebar-open {
+  flex: 0 0 270px !important;
+  min-width: 270px !important;
+  max-width: 270px !important;
+  width: 270px !important;
+}
+
+.sidebar-close {
+  flex: 0 0 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  width: 60px !important;
+}
+
+.ant-menu-vertical {
+  border-right: none;
+}
+
+.ant-menu-inline-collapsed {
+  width: 60px !important;
+}
+
+.ant-menu-vertical {
+  .ant-menu-submenu-title {
+    padding: 0 22px !important;
+  }
+}
+
+.ant-menu-inline {
+  .ant-menu-item {
+    min-height: 40px !important;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    line-height: 22px !important;
+  }
+}

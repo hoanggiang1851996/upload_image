@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "fetch": true,
+    "FormData": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "linebreak-style": 0,
+    "react/forbid-prop-types": 0,
+    "no-unused-vars": 0,
+    "no-console": 0,
+    "import/no-unresolved": "off",
+    "template-curly-spacing" : "off",
+    "indent" : "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": 0,
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-control-regex": 0
+  }
+}
