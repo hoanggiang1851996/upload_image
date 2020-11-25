@@ -17,8 +17,9 @@ const uploadImage = (params) => callApi(
   params,
 );
 
-const updateImage = (id) => axios.put(
+const updateImage = (id, body) => axios.put(
   `${CONFIG_API.API_BE}/Images/${id}`,
+  body,
 );
 
 const removeImage = (id) => axios.delete(

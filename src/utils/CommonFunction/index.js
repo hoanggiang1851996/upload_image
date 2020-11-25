@@ -1,3 +1,5 @@
+import { message } from 'antd';
+
 export const getBase64 = (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -11,4 +13,8 @@ export const dummyRequest = ({ onSuccess }) => {
   setTimeout(() => {
     onSuccess('ok');
   }, 0);
+};
+
+export const notification = (type, messageText) => {
+  message[type](messageText);
 };

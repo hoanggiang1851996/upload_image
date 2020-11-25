@@ -5,8 +5,8 @@ import { getImageByCategory, getImages, removeImage, updateImage, uploadImage } 
 import {
   Upload, Select, Button, Divider, Input,
 } from 'antd';
-import { CloseOutlined, UploadOutlined, PlusOutlined } from '@ant-design/icons';
-import { dummyRequest, getBase64 } from '../../utils/CommonFunction';
+import { DeleteOutlined, UploadOutlined, PlusOutlined } from '@ant-design/icons';
+import { dummyRequest, getBase64, notification } from '../../utils/CommonFunction';
 
 const { Option } = Select;
 
@@ -18,7 +18,6 @@ const Home = React.memo((props) => {
 
   useEffect(() => {
     getImages().then((res) => {
-      console.log(res)
       setCategories(res);
     });
   }, []);
@@ -40,8 +39,8 @@ const Home = React.memo((props) => {
     e.stopPropagation();
 
     removeImage(id).then((res) => {
-      console.log(res);
       getDetailCategory(categoryId);
+      notification('success', 'Xóa ảnh thành công!');
     });
   };
 
@@ -54,30 +53,22 @@ const Home = React.memo((props) => {
     w.document.write(image.outerHTML);
   };
 
-  const onUploadImg = ({ fileList: newFileList }) => {
-    if (categoryId) {
-      const file = newFileList.length > 0 ? newFileList[0].originFileObj : null;
-
-      getBase64(file).then((res) => {
+  const onUploadImg = ({ file: newFile }) => {
+    if (categoryId && JSON.parse(JSON.stringify(newFile.status)) === 'done') {
+      getBase64(newFile.originFileObj).then((res) => {
         const category = JSON.parse(String(categoryId));
 
         const params = {
-          imageName: file.name,
+          Name: newFile.name,
           Category: category.category,
           ContentImage: res,
           Url: '',
         };
-        if (category.id) {
-          updateImage(category.id).then((res1) => {
-            console.log(res1);
-            getDetailCategory(categoryId);
-          });
-        } else {
-          uploadImage(params).then((res1) => {
-            console.log(res1);
-            getDetailCategory(categoryId);
-          });
-        }
+
+        uploadImage(params).then(() => {
+          notification('success', 'Upload ảnh thành công!');
+          getDetailCategory(categoryId);
+        });
       });
     }
   };
@@ -140,11 +131,11 @@ const Home = React.memo((props) => {
       </div>
       <div>
         {imageByCategory.length > 0 && imageByCategory.map((item) => (
-          <div onClick={(e) => viewDetailImage(e, item.contentImage)}>
-            <span style={{ marginRight: 10 }}>
-              {item.url}
+          <div style={{ marginBottom: 30 }} onClick={(e) => viewDetailImage(e, item.contentImage)}>
+            <span className="tag">
+              {item.name}
             </span>
-            <CloseOutlined onClick={(e) => deleteImage(e, item.id)} className="cursor-pointer" />
+            <DeleteOutlined style={{ color: 'red', fontSize: 18 }} onClick={(e) => deleteImage(e, item.id)} className="cursor-pointer" />
           </div>
         ))}
       </div>
